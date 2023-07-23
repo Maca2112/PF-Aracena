@@ -63,6 +63,9 @@ body {
         background-color: map-get($map: $colores, $key: acento);
         text-align: center;
     }
+    .bg-slogan {
+        background-color: map-get($map: $colores, $key: acento);
+    }
 }
 
 footer {
@@ -87,6 +90,15 @@ footer {
     form {
         width: 80%;
         }
+    .card-text {
+        font-size: medium !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .card-text {
+        font-size: large !important;
+    }
 }
 
 @media (min-width: 768px) {
