@@ -51,6 +51,28 @@ body {
         object-fit: contain;
         margin: 0 10px;
     }
+    .agenda {
+        background-color: map-get($map: $colores, $key: acento);
+        display: flex;
+        height: 80vh;
+        margin: 2% 10% 2% 10%;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        background-color: map-get($map: $colores, $key: acento);
+    }
+    footer {
+        background-color: map-get($map: $colores, $key: acento);
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.7s;
+        }
+        a:hover, a:focus {
+            color: map-get($map: $colores, $key: hoverLink);
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -68,5 +90,8 @@ body {
 @media (min-width: 768px) {
     .emph {
         @include acento;
+    }
+    form {
+        width: 40%;
     }
 }
