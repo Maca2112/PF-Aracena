@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+}
+
+/* Comentario compilado */
+// Comentario no compilado
+
+@import 'variables';
+
+// Anchos de columnas hasta 4
+@for $i from 1 to 5 {
+    .col-#{$i} {
+        width: 100% / $i;
+    }
+}
+
+@mixin acento {
+    background-color: map-get($map: $colores, $key: acento);
+    border-radius: 24px;
+}
+
+header {
+    background-color: map-get($map: $colores, $key: fondo);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    .nav-item {
+        margin-left: 10px;
+        transition: all 1s;
+    }
+    .logo {
+        margin: 0 0 0 2%;
+        transition: all 1s;
+    }
+}
+
+body {
+    background-color: map-get($map: $colores, $key: fondo);
+    font-family: 'roboto';
+    .brand-bar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 4.5rem;;
+        padding: 10px;
+    }
+    .brand-logo {
+        flex: 1;
+        height: 100%;
+        object-fit: contain;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .brand-bar {
+        display: none;
+    }
+    .brand-logo {
+        display: none;
+    }
+    form {
+        width: 80%;
+        }
+}
+
+@media (min-width: 768px) {
+    .emph {
+        @include acento;
+    }
+}
