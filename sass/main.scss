@@ -62,16 +62,17 @@ body {
     .card {
         background-color: map-get($map: $colores, $key: acento);
     }
-    footer {
-        background-color: map-get($map: $colores, $key: acento);
-        a {
-            color: inherit;
-            text-decoration: none;
-            transition: all 0.7s;
-        }
-        a:hover, a:focus {
-            color: map-get($map: $colores, $key: hoverLink);
-        }
+}
+
+footer {
+    background-color: map-get($map: $colores, $key: acento);
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.7s;
+    }
+    a:hover, a:focus {
+        color: map-get($map: $colores, $key: hoverLink);
     }
 }
 
