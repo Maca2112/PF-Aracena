@@ -7,20 +7,13 @@
 
 @import 'variables';
 
-// Anchos de columnas hasta 4
-@for $i from 1 to 5 {
-    .col-#{$i} {
-        width: 100% / $i;
-    }
-}
-
 @mixin acento {
     background-color: map-get($map: $colores, $key: acento);
     border-radius: 24px;
 }
 
 header {
-    background-color: map-get($map: $colores, $key: fondo);
+    background-color: map-get($map: $colores, $key: fondo1);
     position: sticky;
     top: 0;
     z-index: 2;
@@ -35,22 +28,12 @@ header {
 }
 
 body {
-    background-color: map-get($map: $colores, $key: fondo);
     font-family: 'roboto';
-    .brand-bar {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        height: 4.5rem;;
-        padding: 10px;
-    }
-    .brand-logo {
-        flex: 1;
-        height: 100%;
-        object-fit: contain;
-        margin: 0 10px;
-    }
+    background: url(../images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     .agenda {
         background-color: map-get($map: $colores, $key: acento);
         display: flex;
@@ -81,23 +64,36 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .brand-bar {
-        display: none;
-    }
-    .brand-logo {
-        display: none;
-    }
     form {
         width: 80%;
         }
     .card-text {
         font-size: medium !important;
     }
+    .carousel {
+        display: none;
+    }
+    .bg-slogan {
+        background: url(../images/slogan.jpg) no-repeat center center;
+        background-size: cover;
+        height: 30vh;
+        align-items: end;
+    }
+    .slogan {
+        background-color: map-get($map: $colores, $key: fondo2);
+        height: 30vh;
+    }
 }
 
 @media (max-width: 1200px) {
     .card-text {
         font-size: large !important;
+    }
+    .brand-bar {
+        display: none !important;
+    }
+    .brand-logo {
+        display: none;
     }
 }
 
